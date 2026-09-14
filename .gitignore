@@ -1,0 +1,25 @@
+# Never commit clinical images or anything derived from them pixel-wise.
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.webp
+*.tif
+*.tiff
+
+# Machine-local binding between the manifests and your copy of the images.
+manifests/local_index.json
+manifests/verification_report.json
+manifests/rebuilt/
+
+# Datasets, checkpoints and results produced by the pipeline.
+work/
+*.pt
+*.npz
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.venv-yolo/
+*.egg-info/

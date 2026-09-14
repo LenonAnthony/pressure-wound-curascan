@@ -1,0 +1,1094 @@
+{
+  "round": "seed_2",
+  "grouping_rule": {
+    "numeric_prefix": "filenames beginning <digits>_ share the leading integer",
+    "copy_suffixes": "trailing (N), __dupN, copy/copia/duplicate suffixes are collapsed",
+    "interpretation": "conservative case-level proxy; patient IDs were unavailable"
+  },
+  "deduplication": {
+    "stage_exact": {
+      "task": "stage",
+      "n_input": 1629,
+      "n_output": 1615,
+      "n_exact_duplicate_groups": 4,
+      "n_redundant_files_removed": 4,
+      "n_conflicting_hash_groups_excluded": 5,
+      "n_conflicting_files_excluded": 10,
+      "duplicate_groups": [
+        {
+          "sha256": "3c9b0b4de542850391b2b9205b137b7fd04c0e688bd13afb9215df15d2148548",
+          "n": 2,
+          "ids": [
+            "pressure-ulcer-on-foot-0019__dup2",
+            "pressure-ulcer-on-foot-0019"
+          ],
+          "labels": [
+            "nao_classificavel"
+          ]
+        },
+        {
+          "sha256": "536ea144d6df9e77a65ebd995b1179b07eafca2678b828c0a59e9006d7ca0d42",
+          "n": 2,
+          "ids": [
+            "stage_3_13399",
+            "stage_3_13399__dup2"
+          ],
+          "labels": [
+            "nao_classificavel"
+          ]
+        },
+        {
+          "sha256": "8327c43b4960be4c7c3df726dc0d847edecf1c1028d4a7083a1aead12f1e5236",
+          "n": 2,
+          "ids": [
+            "pressure-ulcer-on-foot-0017__dup2",
+            "pressure-ulcer-on-foot-0017"
+          ],
+          "labels": [
+            "nao_classificavel"
+          ]
+        },
+        {
+          "sha256": "eb9dbc303f0922a6ca225ecfde81283d680d6652c740d7d31234ae65647fd354",
+          "n": 2,
+          "ids": [
+            "sloughy-pressure-ulcer-0033__dup2",
+            "sloughy-pressure-ulcer-0033"
+          ],
+          "labels": [
+            "nao_classificavel"
+          ]
+        }
+      ],
+      "conflicting_groups": [
+        {
+          "sha256": "02a1a344f9583becb2eb20636263541681589d3a60c5f352c1d372e00529e319",
+          "n": 2,
+          "ids": [
+            "healing-pressure-ulcer-0013",
+            "healing-pressure-ulcer-0013__dup2"
+          ],
+          "labels": [
+            "estagio_4",
+            "nao_classificavel"
+          ]
+        },
+        {
+          "sha256": "3dad7b057f98ab7c8a3e867f4017770870ed13bd48cf38af35455391510a5019",
+          "n": 2,
+          "ids": [
+            "stage_3_86929",
+            "stage_4_2650"
+          ],
+          "labels": [
+            "estagio_3",
+            "estagio_4"
+          ]
+        },
+        {
+          "sha256": "733b1fc3dfcf4b130468a695b41a28f9da52009209f6e1df7421af7d9962b3a2",
+          "n": 2,
+          "ids": [
+            "stage_4_44246",
+            "stage_3_98143"
+          ],
+          "labels": [
+            "estagio_4",
+            "nao_classificavel"
+          ]
+        },
+        {
+          "sha256": "b63787b045628050ebe6f943b229d9735f47089505692de0325aebc6507b1bce",
+          "n": 2,
+          "ids": [
+            "stage_4_87877",
+            "stage_4_91304"
+          ],
+          "labels": [
+            "estagio_3",
+            "estagio_4"
+          ]
+        },
+        {
+          "sha256": "eb3be4e17c754f4a872b0e562506adf409a03a0599e594a21510776aab50f516",
+          "n": 2,
+          "ids": [
+            "healing-pressure-ulcer-0014",
+            "healing-pressure-ulcer-0014__dup2"
+          ],
+          "labels": [
+            "estagio_3",
+            "nao_classificavel"
+          ]
+        }
+      ]
+    },
+    "tissue_exact": {
+      "task": "tissue",
+      "n_input": 1227,
+      "n_output": 1226,
+      "n_exact_duplicate_groups": 1,
+      "n_redundant_files_removed": 1,
+      "n_conflicting_hash_groups_excluded": 0,
+      "n_conflicting_files_excluded": 0,
+      "duplicate_groups": [
+        {
+          "sha256": "c1f077139e40881a93dc31d3fc3667b5fda8e0030f1b4826542cc03c74021871",
+          "n": 2,
+          "ids": [
+            "stage_2_13877",
+            "stage_2_56458"
+          ],
+          "labels": [
+            "(0, 1, 0, 0, 0)"
+          ]
+        }
+      ],
+      "conflicting_groups": []
+    },
+    "stage_perceptual": {
+      "task": "stage",
+      "n_input": 1615,
+      "n_output": 1581,
+      "criteria": "pHash Hamming <=4, or Hamming <=10 with mean 64x64 grayscale error <=10",
+      "n_candidate_edges": 28,
+      "n_duplicate_groups": 19,
+      "n_redundant_images_removed": 19,
+      "n_conflicting_groups_excluded": 7,
+      "n_conflicting_images_excluded": 15,
+      "edges": [
+        {
+          "left": "healing-pressure-ulcer-0016",
+          "right": "stage_4_26515",
+          "hamming": 0,
+          "mean_gray_error": null
+        },
+        {
+          "left": "stage_3_61351",
+          "right": "pressure-ulcer-on-foot-0018",
+          "hamming": 0,
+          "mean_gray_error": null
+        },
+        {
+          "left": "necrotic-pressure-ulcer-0022",
+          "right": "stage_2_54664",
+          "hamming": 0,
+          "mean_gray_error": null
+        },
+        {
+          "left": "stage_ii_041",
+          "right": "stage_ii_029",
+          "hamming": 2,
+          "mean_gray_error": null
+        },
+        {
+          "left": "stage_4_29401",
+          "right": "healing-pressure-ulcer-0029",
+          "hamming": 0,
+          "mean_gray_error": null
+        },
+        {
+          "left": "healing-pressure-ulcer-0022",
+          "right": "stage_4_96250",
+          "hamming": 0,
+          "mean_gray_error": null
+        },
+        {
+          "left": "stage_iv_001",
+          "right": "stage_iii_010",
+          "hamming": 2,
+          "mean_gray_error": null
+        },
+        {
+          "left": "sloughy-pressure-ulcer-0008",
+          "right": "stage_3_3816",
+          "hamming": 0,
+          "mean_gray_error": null
+        },
+        {
+          "left": "stage_ii_045",
+          "right": "stage_ii_007",
+          "hamming": 10,
+          "mean_gray_error": 7.925537109375
+        },
+        {
+          "left": "stage_4_5107",
+          "right": "sloughy-pressure-ulcer-0027",
+          "hamming": 0,
+          "mean_gray_error": null
+        },
+        {
+          "left": "stage_4_96717",
+          "right": "sloughy-pressure-ulcer-0015",
+          "hamming": 0,
+          "mean_gray_error": null
+        },
+        {
+          "left": "stage_4_94680",
+          "right": "healing-pressure-ulcer-0001",
+          "hamming": 0,
+          "mean_gray_error": null
+        },
+        {
+          "left": "stage_4_94680",
+          "right": "stage_4_27359",
+          "hamming": 0,
+          "mean_gray_error": null
+        },
+        {
+          "left": "stage_3_70238",
+          "right": "healing-pressure-ulcer-0004",
+          "hamming": 0,
+          "mean_gray_error": null
+        },
+        {
+          "left": "stage_4_9759",
+          "right": "healing-pressure-ulcer-0002",
+          "hamming": 0,
+          "mean_gray_error": null
+        },
+        {
+          "left": "healing-pressure-ulcer-0017",
+          "right": "stage_4_89767",
+          "hamming": 0,
+          "mean_gray_error": null
+        },
+        {
+          "left": "superficial-pressure-ulcer0011",
+          "right": "stage_2_28271",
+          "hamming": 0,
+          "mean_gray_error": null
+        },
+        {
+          "left": "stage_3_13399",
+          "right": "pressure-ulcer-on-foot-0016",
+          "hamming": 0,
+          "mean_gray_error": null
+        },
+        {
+          "left": "stage_ii_043",
+          "right": "stage_ii_011",
+          "hamming": 2,
+          "mean_gray_error": null
+        },
+        {
+          "left": "stage_iii_017",
+          "right": "stage_ii_044",
+          "hamming": 4,
+          "mean_gray_error": null
+        },
+        {
+          "left": "pressure-ulcer-on-foot-0051",
+          "right": "stage_3_80922",
+          "hamming": 0,
+          "mean_gray_error": null
+        },
+        {
+          "left": "unstageable_029",
+          "right": "unstageable_002",
+          "hamming": 0,
+          "mean_gray_error": null
+        },
+        {
+          "left": "healing-pressure-ulcer-0001",
+          "right": "stage_4_27359",
+          "hamming": 0,
+          "mean_gray_error": null
+        },
+        {
+          "left": "sloughy-pressure-ulcer-0026",
+          "right": "stage_4_17173",
+          "hamming": 0,
+          "mean_gray_error": null
+        },
+        {
+          "left": "stage_ii_004",
+          "right": "stage_ii_036",
+          "hamming": 2,
+          "mean_gray_error": null
+        },
+        {
+          "left": "stage_4_95470",
+          "right": "sloughy-pressure-ulcer-0004",
+          "hamming": 0,
+          "mean_gray_error": null
+        },
+        {
+          "left": "stage_3_71562",
+          "right": "pressure-ulcer-on-foot-0032",
+          "hamming": 0,
+          "mean_gray_error": null
+        },
+        {
+          "left": "stage_3_26877",
+          "right": "pressure-ulcer-on-foot-0031",
+          "hamming": 0,
+          "mean_gray_error": null
+        }
+      ],
+      "duplicate_groups": [
+        {
+          "n": 2,
+          "ids": [
+            "healing-pressure-ulcer-0016",
+            "stage_4_26515"
+          ],
+          "labels": [
+            "estagio_3"
+          ],
+          "phash": [
+            "f4acd2c0cb13cccd",
+            "f4acd2c0cb13cccd"
+          ]
+        },
+        {
+          "n": 2,
+          "ids": [
+            "stage_3_61351",
+            "pressure-ulcer-on-foot-0018"
+          ],
+          "labels": [
+            "nao_classificavel"
+          ],
+          "phash": [
+            "dbd82bc0653ea58a",
+            "dbd82bc0653ea58a"
+          ]
+        },
+        {
+          "n": 2,
+          "ids": [
+            "stage_ii_041",
+            "stage_ii_029"
+          ],
+          "labels": [
+            "estagio_3"
+          ],
+          "phash": [
+            "e2289f62904eb7d9",
+            "e2289f6a904ab7d9"
+          ]
+        },
+        {
+          "n": 2,
+          "ids": [
+            "stage_4_29401",
+            "healing-pressure-ulcer-0029"
+          ],
+          "labels": [
+            "estagio_4"
+          ],
+          "phash": [
+            "e9e3e72e989a1161",
+            "e9e3e72e989a1161"
+          ]
+        },
+        {
+          "n": 2,
+          "ids": [
+            "healing-pressure-ulcer-0022",
+            "stage_4_96250"
+          ],
+          "labels": [
+            "estagio_4"
+          ],
+          "phash": [
+            "aaa194d4d32c5d9b",
+            "aaa194d4d32c5d9b"
+          ]
+        },
+        {
+          "n": 2,
+          "ids": [
+            "sloughy-pressure-ulcer-0008",
+            "stage_3_3816"
+          ],
+          "labels": [
+            "nao_classificavel"
+          ],
+          "phash": [
+            "b69bd8c3cc9890c7",
+            "b69bd8c3cc9890c7"
+          ]
+        },
+        {
+          "n": 2,
+          "ids": [
+            "stage_ii_045",
+            "stage_ii_007"
+          ],
+          "labels": [
+            "estagio_2"
+          ],
+          "phash": [
+            "a0bb19cc67b01fb1",
+            "b5b11bcc67a05f81"
+          ]
+        },
+        {
+          "n": 2,
+          "ids": [
+            "stage_3_70238",
+            "healing-pressure-ulcer-0004"
+          ],
+          "labels": [
+            "estagio_3"
+          ],
+          "phash": [
+            "9a8cf41ee05983fc",
+            "9a8cf41ee05983fc"
+          ]
+        },
+        {
+          "n": 2,
+          "ids": [
+            "stage_4_9759",
+            "healing-pressure-ulcer-0002"
+          ],
+          "labels": [
+            "estagio_3"
+          ],
+          "phash": [
+            "b0bbc3e1d3d0d0ca",
+            "b0bbc3e1d3d0d0ca"
+          ]
+        },
+        {
+          "n": 2,
+          "ids": [
+            "healing-pressure-ulcer-0017",
+            "stage_4_89767"
+          ],
+          "labels": [
+            "estagio_3"
+          ],
+          "phash": [
+            "b0e287cf5e5b6460",
+            "b0e287cf5e5b6460"
+          ]
+        },
+        {
+          "n": 2,
+          "ids": [
+            "superficial-pressure-ulcer0011",
+            "stage_2_28271"
+          ],
+          "labels": [
+            "estagio_2"
+          ],
+          "phash": [
+            "a54d563479b66493",
+            "a54d563479b66493"
+          ]
+        },
+        {
+          "n": 2,
+          "ids": [
+            "stage_3_13399",
+            "pressure-ulcer-on-foot-0016"
+          ],
+          "labels": [
+            "nao_classificavel"
+          ],
+          "phash": [
+            "97d67ba970196238",
+            "97d67ba970196238"
+          ]
+        },
+        {
+          "n": 2,
+          "ids": [
+            "stage_ii_043",
+            "stage_ii_011"
+          ],
+          "labels": [
+            "estagio_2"
+          ],
+          "phash": [
+            "9180ce1ce9bd2fd2",
+            "9180ce1ccbbd2fd2"
+          ]
+        },
+        {
+          "n": 2,
+          "ids": [
+            "pressure-ulcer-on-foot-0051",
+            "stage_3_80922"
+          ],
+          "labels": [
+            "estagio_3"
+          ],
+          "phash": [
+            "df1f642c91308fc3",
+            "df1f642c91308fc3"
+          ]
+        },
+        {
+          "n": 2,
+          "ids": [
+            "unstageable_029",
+            "unstageable_002"
+          ],
+          "labels": [
+            "nao_classificavel"
+          ],
+          "phash": [
+            "e88687b75c4aa9d4",
+            "e88687b75c4aa9d4"
+          ]
+        },
+        {
+          "n": 2,
+          "ids": [
+            "stage_ii_004",
+            "stage_ii_036"
+          ],
+          "labels": [
+            "estagio_2"
+          ],
+          "phash": [
+            "bde4d09797183e84",
+            "bde4d097b7183a84"
+          ]
+        },
+        {
+          "n": 2,
+          "ids": [
+            "stage_4_95470",
+            "sloughy-pressure-ulcer-0004"
+          ],
+          "labels": [
+            "estagio_4"
+          ],
+          "phash": [
+            "d59dc252cc673076",
+            "d59dc252cc673076"
+          ]
+        },
+        {
+          "n": 2,
+          "ids": [
+            "stage_3_71562",
+            "pressure-ulcer-on-foot-0032"
+          ],
+          "labels": [
+            "estagio_3"
+          ],
+          "phash": [
+            "8a7c77867883639c",
+            "8a7c77867883639c"
+          ]
+        },
+        {
+          "n": 2,
+          "ids": [
+            "stage_3_26877",
+            "pressure-ulcer-on-foot-0031"
+          ],
+          "labels": [
+            "estagio_3"
+          ],
+          "phash": [
+            "d0c4cbd33e48712f",
+            "d0c4cbd33e48712f"
+          ]
+        }
+      ],
+      "conflicting_groups": [
+        {
+          "n": 2,
+          "ids": [
+            "necrotic-pressure-ulcer-0022",
+            "stage_2_54664"
+          ],
+          "labels": [
+            "estagio_2",
+            "nao_classificavel"
+          ],
+          "phash": [
+            "f1d8cd85462ab363",
+            "f1d8cd85462ab363"
+          ]
+        },
+        {
+          "n": 2,
+          "ids": [
+            "stage_iv_001",
+            "stage_iii_010"
+          ],
+          "labels": [
+            "estagio_3",
+            "estagio_4"
+          ],
+          "phash": [
+            "db207a3cdd22e03d",
+            "9b247a3cdd22e03d"
+          ]
+        },
+        {
+          "n": 2,
+          "ids": [
+            "stage_4_5107",
+            "sloughy-pressure-ulcer-0027"
+          ],
+          "labels": [
+            "estagio_4",
+            "nao_classificavel"
+          ],
+          "phash": [
+            "da5dcb6035cdc017",
+            "da5dcb6035cdc017"
+          ]
+        },
+        {
+          "n": 2,
+          "ids": [
+            "stage_4_96717",
+            "sloughy-pressure-ulcer-0015"
+          ],
+          "labels": [
+            "estagio_3",
+            "estagio_4"
+          ],
+          "phash": [
+            "aadf2168978f68a4",
+            "aadf2168978f68a4"
+          ]
+        },
+        {
+          "n": 3,
+          "ids": [
+            "stage_4_94680",
+            "healing-pressure-ulcer-0001",
+            "stage_4_27359"
+          ],
+          "labels": [
+            "estagio_3",
+            "estagio_4"
+          ],
+          "phash": [
+            "e4a0d3cf8e5839c9",
+            "e4a0d3cf8e5839c9",
+            "e4a0d3cf8e5839c9"
+          ]
+        },
+        {
+          "n": 2,
+          "ids": [
+            "stage_iii_017",
+            "stage_ii_044"
+          ],
+          "labels": [
+            "estagio_2",
+            "estagio_3"
+          ],
+          "phash": [
+            "dcda8897698c6336",
+            "d4da8893798c6b36"
+          ]
+        },
+        {
+          "n": 2,
+          "ids": [
+            "sloughy-pressure-ulcer-0026",
+            "stage_4_17173"
+          ],
+          "labels": [
+            "estagio_3",
+            "estagio_4"
+          ],
+          "phash": [
+            "f4dea9a982e2543c",
+            "f4dea9a982e2543c"
+          ]
+        }
+      ]
+    },
+    "tissue_perceptual": {
+      "task": "tissue",
+      "n_input": 1226,
+      "n_output": 1224,
+      "criteria": "pHash Hamming <=4, or Hamming <=10 with mean 64x64 grayscale error <=10",
+      "n_candidate_edges": 2,
+      "n_duplicate_groups": 2,
+      "n_redundant_images_removed": 2,
+      "n_conflicting_groups_excluded": 0,
+      "n_conflicting_images_excluded": 0,
+      "edges": [
+        {
+          "left": "54_1",
+          "right": "54_0",
+          "hamming": 10,
+          "mean_gray_error": 8.500244140625
+        },
+        {
+          "left": "122_1",
+          "right": "122_0",
+          "hamming": 6,
+          "mean_gray_error": 7.434814453125
+        }
+      ],
+      "duplicate_groups": [
+        {
+          "n": 2,
+          "ids": [
+            "54_1",
+            "54_0"
+          ],
+          "labels": [
+            "(0, 0, 0, 0, 0)"
+          ],
+          "phash": [
+            "f5e4ca9926c37234",
+            "f4e4cb993466d234"
+          ]
+        },
+        {
+          "n": 2,
+          "ids": [
+            "122_1",
+            "122_0"
+          ],
+          "labels": [
+            "(0, 0, 0, 0, 0)"
+          ],
+          "phash": [
+            "f0e98dc7e31e8831",
+            "f8e88dc6e30e8e31"
+          ]
+        }
+      ],
+      "conflicting_groups": []
+    }
+  },
+  "perceptual_grouping": {
+    "threshold": "64-bit pHash Hamming <=8",
+    "n_edges": 1,
+    "edges": [
+      {
+        "task": "stage",
+        "left": "stage_4_3982",
+        "right": "stage_4_40302",
+        "hamming": 8
+      }
+    ]
+  },
+  "multitask_matching": {
+    "n": 905,
+    "matched_by_sha256": 0,
+    "ambiguous_sha256_not_used": 0
+  },
+  "split": {
+    "search_seed": 20260812,
+    "trials": 100000,
+    "target_fractions": {
+      "train": 0.8,
+      "val": 0.15,
+      "test": 0.05
+    },
+    "n_groups": 1336,
+    "groups_by_split": {
+      "train": 1072,
+      "val": 199,
+      "test": 65
+    },
+    "objective": 0.023740767703163586,
+    "feature_names": [
+      "stage:n",
+      "stage:estagio_1",
+      "stage:estagio_2",
+      "stage:estagio_3",
+      "stage:estagio_4",
+      "stage:nao_classificavel",
+      "tissue:n",
+      "tissue:HIPEREMIA",
+      "tissue:GRANULAÇÃO",
+      "tissue:ESFACELO",
+      "tissue:NECROSE SECA",
+      "tissue:NÃO CLASSIFICÁVEL",
+      "m1:HIPEREMIA",
+      "m1:GRANULAÇÃO",
+      "m1:AMBAS",
+      "m1:NÃO CLASSIFICÁVEL",
+      "m2:NECROSE SECA",
+      "m2:ESFACELO",
+      "m2:AMBAS",
+      "m2:NÃO CLASSIFICÁVEL",
+      "tissue-sl6:HIPEREMIA",
+      "tissue-sl6:GRANULAÇÃO",
+      "tissue-sl6:ESFACELO",
+      "tissue-sl6:NECROSE SECA",
+      "tissue-sl6:NÃO CLASSIFICÁVEL",
+      "tissue-sl6:MULTI",
+      "joint:n",
+      "joint-stage:estagio_1",
+      "joint-stage:estagio_2",
+      "joint-stage:estagio_3",
+      "joint-stage:estagio_4",
+      "joint-stage:nao_classificavel",
+      "joint-tissue:HIPEREMIA",
+      "joint-tissue:GRANULAÇÃO",
+      "joint-tissue:ESFACELO",
+      "joint-tissue:NECROSE SECA",
+      "joint-tissue:NÃO CLASSIFICÁVEL"
+    ]
+  },
+  "leakage": {
+    "group_leak_count": 0,
+    "exact_content_leak_count": 0,
+    "perceptual_leak_count": 0,
+    "group_leaks": {},
+    "exact_content_leaks": {},
+    "perceptual_leaks": []
+  },
+  "detector": {
+    "note": "The detector keeps its own task-specific split from the earlier round; it was not regrouped or re-run under the seed_2 protocol and is excluded from every classification claim. case_proxy_group and the leakage counters below are reported for transparency only.",
+    "n_total": 1514,
+    "n_by_split": {
+      "train": 1059,
+      "val": 227,
+      "test": 228
+    },
+    "n_boxes": 1499,
+    "n_images_without_box": 68,
+    "case_proxy_groups_crossing_splits": 121,
+    "exact_content_groups_crossing_splits": 2,
+    "crossing_case_proxy_groups": [
+      "clinical:1",
+      "clinical:10",
+      "clinical:100",
+      "clinical:101",
+      "clinical:103",
+      "clinical:104",
+      "clinical:105",
+      "clinical:106",
+      "clinical:108",
+      "clinical:11",
+      "clinical:110",
+      "clinical:111",
+      "clinical:112",
+      "clinical:113",
+      "clinical:114",
+      "clinical:115",
+      "clinical:117",
+      "clinical:118",
+      "clinical:119",
+      "clinical:120",
+      "clinical:122",
+      "clinical:123",
+      "clinical:124",
+      "clinical:125",
+      "clinical:126",
+      "clinical:128",
+      "clinical:129",
+      "clinical:13",
+      "clinical:130",
+      "clinical:131",
+      "clinical:132",
+      "clinical:134",
+      "clinical:136",
+      "clinical:137",
+      "clinical:139",
+      "clinical:14",
+      "clinical:142",
+      "clinical:143",
+      "clinical:145",
+      "clinical:146",
+      "clinical:147",
+      "clinical:15",
+      "clinical:150",
+      "clinical:151",
+      "clinical:152",
+      "clinical:153",
+      "clinical:156",
+      "clinical:16",
+      "clinical:17",
+      "clinical:18",
+      "clinical:2",
+      "clinical:21",
+      "clinical:22",
+      "clinical:23",
+      "clinical:24",
+      "clinical:25",
+      "clinical:26",
+      "clinical:27",
+      "clinical:31",
+      "clinical:32",
+      "clinical:33",
+      "clinical:34",
+      "clinical:35",
+      "clinical:36",
+      "clinical:37",
+      "clinical:38",
+      "clinical:4",
+      "clinical:40",
+      "clinical:41",
+      "clinical:42",
+      "clinical:43",
+      "clinical:44",
+      "clinical:45",
+      "clinical:47",
+      "clinical:48",
+      "clinical:49",
+      "clinical:5",
+      "clinical:50",
+      "clinical:51",
+      "clinical:52",
+      "clinical:53",
+      "clinical:54",
+      "clinical:56",
+      "clinical:57",
+      "clinical:59",
+      "clinical:6",
+      "clinical:60",
+      "clinical:61",
+      "clinical:62",
+      "clinical:63",
+      "clinical:64",
+      "clinical:67",
+      "clinical:68",
+      "clinical:69",
+      "clinical:7",
+      "clinical:70",
+      "clinical:72",
+      "clinical:73",
+      "clinical:75",
+      "clinical:76",
+      "clinical:78",
+      "clinical:79",
+      "clinical:8",
+      "clinical:80",
+      "clinical:81",
+      "clinical:82",
+      "clinical:83",
+      "clinical:84",
+      "clinical:85",
+      "clinical:87",
+      "clinical:88",
+      "clinical:9",
+      "clinical:90",
+      "clinical:91",
+      "clinical:92",
+      "clinical:93",
+      "clinical:94",
+      "clinical:95",
+      "clinical:96",
+      "clinical:97",
+      "clinical:99"
+    ]
+  },
+  "summary": {
+    "round": "seed_2",
+    "training_seeds_planned": [
+      42,
+      43,
+      44
+    ],
+    "stage": {
+      "n_total": 1581,
+      "n_by_split": {
+        "train": 1271,
+        "val": 229,
+        "test": 81
+      },
+      "counts": {
+        "train": {
+          "estagio_2": 270,
+          "estagio_4": 159,
+          "estagio_1": 172,
+          "estagio_3": 591,
+          "nao_classificavel": 79
+        },
+        "val": {
+          "estagio_3": 94,
+          "estagio_4": 25,
+          "estagio_1": 38,
+          "estagio_2": 60,
+          "nao_classificavel": 12
+        },
+        "test": {
+          "estagio_1": 11,
+          "estagio_4": 12,
+          "estagio_3": 40,
+          "estagio_2": 13,
+          "nao_classificavel": 5
+        }
+      }
+    },
+    "tissue": {
+      "n_total": 1224,
+      "n_by_split": {
+        "train": 1005,
+        "val": 159,
+        "test": 60
+      },
+      "positive_counts": {
+        "train": {
+          "HIPEREMIA": 185,
+          "GRANULAÇÃO": 252,
+          "ESFACELO": 168,
+          "NECROSE SECA": 43,
+          "NÃO CLASSIFICÁVEL": 66
+        },
+        "val": {
+          "HIPEREMIA": 38,
+          "GRANULAÇÃO": 35,
+          "ESFACELO": 24,
+          "NECROSE SECA": 6,
+          "NÃO CLASSIFICÁVEL": 12
+        },
+        "test": {
+          "HIPEREMIA": 14,
+          "GRANULAÇÃO": 16,
+          "ESFACELO": 9,
+          "NECROSE SECA": 3,
+          "NÃO CLASSIFICÁVEL": 2
+        }
+      }
+    },
+    "multitask": {
+      "n_total": 905,
+      "n_by_split": {
+        "train": 730,
+        "val": 130,
+        "test": 45
+      },
+      "counts": {
+        "train": {
+          "estagio_3": 320,
+          "estagio_2": 219,
+          "estagio_1": 151,
+          "estagio_4": 38,
+          "nao_classificavel": 2
+        },
+        "val": {
+          "estagio_3": 41,
+          "estagio_4": 5,
+          "estagio_1": 34,
+          "estagio_2": 50
+        },
+        "test": {
+          "estagio_2": 10,
+          "estagio_4": 3,
+          "estagio_1": 11,
+          "estagio_3": 21
+        }
+      }
+    },
+    "audit": {
+      "stage_conflict_groups_excluded": 5,
+      "stage_files_excluded_for_conflict": 10,
+      "stage_redundant_files_removed": 4,
+      "stage_perceptual_conflict_groups_excluded": 7,
+      "stage_images_excluded_for_perceptual_conflict": 15,
+      "stage_perceptual_redundant_images_removed": 19,
+      "tissue_conflict_groups_excluded": 0,
+      "tissue_redundant_files_removed": 1,
+      "tissue_perceptual_conflict_groups_excluded": 0,
+      "tissue_perceptual_redundant_images_removed": 2,
+      "group_leak_count": 0,
+      "exact_content_leak_count": 0,
+      "perceptual_leak_count": 0
+    }
+  }
+}

@@ -1,0 +1,12 @@
+# Environment B -- Ultralytics YOLO26s training and inference.
+# Python 3.12, kept separate from requirements.txt because the two rounds were
+# run on different torch and numpy majors.
+#
+#   python3.12 -m venv .venv-yolo && . .venv-yolo/bin/activate
+#   pip install -r requirements-yolo.txt
+
+torch==2.12.1
+torchvision==0.27.1
+ultralytics==8.4.86
+numpy==2.5.0
+pillow==12.1.1

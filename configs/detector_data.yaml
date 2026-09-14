@@ -1,0 +1,36 @@
+# Ultralytics detect configuration for the wound detector -- TEMPLATE.
+#
+# You normally do not need this file. Running
+#
+#     python scripts/build_yolo_datasets.py
+#
+# rebuilds the detector from manifests/detector_split.json plus your local
+# images and writes a ready-to-use, fully resolved config at
+#
+#     work/yolo_datasets/detector/data.yaml
+#
+# which is what `python scripts/train_yolo.py --task detect` picks up by default.
+#
+# Use this template only if your copy of the dataset lives somewhere else. Set
+# `path` to an ABSOLUTE directory: Ultralytics resolves a relative `path`
+# against its own `datasets_dir` setting, not against the location of this file,
+# so a relative value here will silently look in the wrong place.
+#
+#     yolo detect train data=configs/detector_data.yaml model=yolo26s.pt \
+#         epochs=300 batch=16 imgsz=640 seed=0
+#
+# The detector keeps its own 1,059 / 227 / 228 partition. It was trained once,
+# not across the three classification seeds, and its metrics are reported alone
+# -- never combined with a classification result.
+
+task: detect
+
+# EDIT ME: absolute path to the directory holding images/ and labels/.
+path: /absolute/path/to/work/yolo_datasets/detector
+
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: ferida

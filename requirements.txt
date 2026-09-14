@@ -1,0 +1,17 @@
+# Environment A -- timm models, manifests, calibration, evaluation.
+# Python 3.11. This is the environment used for every script except train_yolo.py
+# and the YOLO half of infer.py; see requirements-yolo.txt for those.
+#
+#   python -m venv .venv && . .venv/bin/activate
+#   pip install -r requirements.txt
+#
+# Install the torch build that matches your CUDA runtime first, e.g.
+#   pip install torch==2.10.0 torchvision==0.25.0 --index-url https://download.pytorch.org/whl/cu128
+
+torch==2.10.0
+torchvision==0.25.0
+timm==1.0.25
+numpy==1.26.4
+scipy==1.17.1
+scikit-learn==1.8.0
+pillow==12.1.1
