@@ -401,13 +401,8 @@ a reproduction is not read as stronger than it is.
 
 ```bibtex
 @inproceedings{pressure_wound_staging,
-  title     = {Pressure Injury Staging and Tissue Classification:
-               A Content-Audited Evaluation with a Prospective Clinical Pilot},
-  author    = {Falc\~{a}o, Andreza and Anthony, Lenon and Angelo, Barbara and
-               Rolim, Filipe and Cavalcanti, Maria da Concei\c{c}\~{a}o and
-               Andrade, Rafaela and Silva, Mateus and Pontual, Taciana and
-               C\^{a}mara, Andr\'{e}},
-  booktitle = {TODO: venue},
+  title     = {Pressure Injury Staging and Tissue Classification: A Content-Audited Evaluation with a Prospective Clinical Pilot},
+  author    = {Andreza Falcao, Lenon Anthony, Barbara Angelo, Filipe Rolim, Maria Da Conceição Cavalcanti, Rafaela Andrade, Mateus Silva, Taciana Pontual and André Câmara},
   year      = {2026}
 }
 ```
